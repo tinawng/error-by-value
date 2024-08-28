@@ -3,7 +3,7 @@
  * @example
  * const { data: albums, error } = await $tryAsync(fetch("/albums"))
  * @param {Promise} promise
- * @returns {Promise<{ data: any | undefined, error: { name: string, message: string } | undefined }>}
+ * @returns {Promise<{ data: any|null, error: Error|null }>}
  */
 export async function $tryAsync(promise) {
   try {
@@ -18,7 +18,8 @@ export async function $tryAsync(promise) {
  * @example
  * const { data: album, error } = $try(myFunction, "albums", "DaftPunk", 2001)
  * @param {Function} fct
- * @returns {{ data: any, error: Error }}
+ * @param {...any} args
+ * @returns {{ data: any|null, error: Error|null }}
  */
 export function $try(fct, ...args) {
   try {
