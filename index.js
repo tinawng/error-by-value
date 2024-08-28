@@ -5,7 +5,7 @@
  * @param {Promise} promise
  * @returns {Promise<{ data: any|null, error: Error|null }>}
  */
-export async function $tryAsync(promise) {
+exports.$tryAsync = async (promise) => {
   try {
     return { data: await promise, error: null }
   } catch (error) {
@@ -21,7 +21,7 @@ export async function $tryAsync(promise) {
  * @param {...any} args
  * @returns {{ data: any|null, error: Error|null }}
  */
-export function $try(fct, ...args) {
+exports.$try = (fct, ...args) => {
   try {
     return { data: fct(...args), error: null }
   } catch (error) {
