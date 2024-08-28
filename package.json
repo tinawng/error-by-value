@@ -1,0 +1,14 @@
+{
+  "name": "error-by-value",
+  "description": "Return error by value is the only way",
+  "version": "1.0.0",
+  "author": "Tina Wang",
+  "license": "MIT",
+  "repository": "tinawng/error-by-value",
+  "engines": {
+    "node": ">= 0.10.0"
+  },
+  "files": [
+    "index.js"
+  ]
+}
