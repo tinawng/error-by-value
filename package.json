@@ -11,6 +11,7 @@
   "main": "./index.js",
   "module": "./index.mjs",
   "files": [
-    "index.js"
+    "index.js",
+    "index.mjs"
   ]
 }
